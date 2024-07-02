@@ -1,0 +1,94 @@
+Lect-1:-
+-----------------------
+For Angular Pre-requisite:-
+1. HTML
+2. CSS
+3. J.S. is Recommended but not Pre-requisite.
+>> Angular first version is based on J.S.
+>> J.S. is Lossely typed Language,it means Suppose if I created a variable and put in string in it,so later on in the program I can also put numbers in it, I can also put boolean in it.
+>> J.S doesn't compile it directly Interpret.
+>> Typescript is a Strongly Typed Language.
+TypeScript =>> Compile (.JS) + Interpret.
+T.S. => Compiler(Transpile) => .JS
+Angular => Framework. [Google]  [AATA]
+React => Library.  [Facebook] (GEHU)
+------------------------------------------------------
+>> Angular is used to build SPA(Single Page Web Application),only front end of the application.
+--------------------------------------------------------------------
+Application:-
+Two types of Application:-
+------------------------------------------------------------
+1. TWA (Traditional Web Application). => In it entire page will be loaded again and again.
+2. SPA (Single Page Application). -> In SPA entire page will not be loaded,content of new page will be updated in the current page.
+>> In SPA website pages will not be loaded again and again.
+>> Here page loaded as partial page loading.
+-------------------------------------------------------------------------------
+Node JS -> It provide Run time Enviornment for run js and to run angular application.
+npm -> Node Package Manager help to install node js and typescript.
+--------------------------------------------------------------------------------------
+Install the Angular CLI:-
+-----------------------------------------------
+You use the angular CLI to create projects,generate application and library code, and perform a variety of ongoing development tasks such as testing,bundling and deployment.
+To install the angular CLI,open a terminal window and run the following command:-
+1. npm install -g @angular/cli or   npm install -g @angular/cli@17
+2. npm install -g typescript   or   npm install typescript@latest -g
+    npm uninstall -g typescript  - To uninstall typescript.
+-------------------------------------------------------------------------------------------
+TypeScript:-
+---------------------------
+>> It is an object oriented scripting language.
+>> It is a superset of Java script.
+>> It is compiled into java script. This is called transpiled.
+>> Unlike java script, type script is strongly typed language.
+>> In an angular every project has module,component,directive,services,pipes etc are written using typescript.
+---------------------------------------------------------
+Main Commands of programming:- 
+=====================================
+1) Command to create variable.
+2) Command to assign value to variable.
+3) Command to perform arithmetic and comparison operation.
+4) Command to apply condition.
+5) Command to execute loop.
+6) Command to create object.
+7) Command to call methods and function.
+8) Command to create array.
+---------------------------------------------------------------
+Variable:-
+--------------------
+>> Variable is nothing, it is a named container of data in memory. Program creates this container to keep data. Actually program reserves named space(Runtime enviornment allocates this space) in memory and keep data into it. This space is called variable.
+let variablename:datatype;  // ; is optional
+or
+let variablename:datatype=value;
+or
+var variablename:datatype;
+or
+let variablename=value;  // It is known as Inferring. compiler automatically understand which type of value you are going to store.
+Following four datatypes we can use:-
+1. string -> single and double quotes.
+2. number -> int,decimal
+3. boolean. -> True/False
+4. any -> It make variable loosely typed.
+-----------------------------------------------------------------------------------
+Command to compile and Run typescript in cmd:-
+---------------------------------------------------------------------------
+let str:string;// Command to create variable
+str="Kailash Chandra Joshi"; // Command to assign value.
+console.log(str);
+or 
+let str:string="Kailash Chandra Joshi";
+console.log(str);
+----------------------------------------------------
+tsc p1.ts  // Compile.
+node p1.js or node p1 // Run
+-------------------------------------------------
+Ctrl+ ` => To Open Terminal in vs Code.
+-------------------------------------------------
+let x:string|number|boolean;
+x="Cetpa Infotech";
+console.log(x);
+x=456;
+x+=45;
+console.log(x);
+x=true;
+console.log(x);
+-----------------------------------------------
