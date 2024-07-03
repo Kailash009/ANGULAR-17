@@ -1,0 +1,65 @@
+Lect-2:-
+-----------
+JSON:-
+---------------------
+>> Java Script Object Notation.
+{
+    "pid":101,
+    "name":"Mouse",
+    "brand":"Logitech",
+    "price":1300
+}
+--------------------------------------------------------------------------------
+XML: Extensible Markup Language. It is used to store data,whereas html is used to present data.
+>> XML is case sensitive while html is not case sensitive.
+>> XML you can defined your own tag and html used only built-in tags.
+<product>
+<pid>101</pid>
+<name>Mouse</name>
+<brand>Logitech</brand>
+<price>1300</price>
+</product>   
+--------------------------------------------------------------------------------
+Ajax (Asynchronous Java Script and XML)
+--------------------------------------------------------------------------------------------
+Asynchrounous -> In it,Multiple task executed simultaneously.
+(Loading and Displaying) Production and Consumption.
+Synchrounous -> Single task executed at a time. (First Loading and then Displaying)
+URL -> Uniform Resource Locator.
+Resource -> files/pages/server side programs.
+http://localhost:8080/aa/demo.html
+1) Protocol -> Http 
+2) IP address -> Localhost
+3) Port Number-> 8080
+4) Resource path. -> aa/demo.html 
+------------------------------------------------------------------------
+=> Arrow Function. [JS and TypeScript]
+=> Lambda Expression [C# and JAVA]. 
+-------------------------------------------------------
+Note: There is no use of Multiple inheritance in real time or programming.
+It is not realistic. [One child having multiple Parent]
+Class is a blue print of object,Inside class we define object properties.
+>> Interface is used to implement Method Overriding not Multiple Inheritance.
+>> Multiple Inheritance is required for Method Overriding.
+------------------------------------------------------------------------------
+let x:any; // It can store any value like Python and J.S.
+x=90;
+x="Joshi"
+x=true; // Here x is Loosely Typed.
+---------------------------------------------
+With Class =>> Method
+Without Class =>> Function/Program. =>> Set of Methods.
+-----------------------------------------------
+let x=10;
+++x; // Prefix --> It returns new value of the operand.
+or
+x++; // Postfix. --> It returns old value of the operand.
+-----------------------------------------------------------------------------------------
+Note: Every operator returns a value after performing operation.
+Assignment operation perform operation at last.
+y=x++; // Here we have = and ++ therefore ++ run first.
+----------------------------------------------------------------------------------------
+Note: && and || operator are short circuit operators.
+>> if first condition is false then && operator returns false without executing second condition.
+>> if first condition is true then || operator returns true without executing second condition.
+------------------------------------------------------------------------------------------------
