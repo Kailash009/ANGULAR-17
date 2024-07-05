@@ -1,0 +1,158 @@
+Lect-3:-
+------------------------
+OOP's (Object Oriented Programming Structure) in TypeScript:-
+---------------------------------------------------------------------------------
+1. Object.
+>> Every real world entity is known as object.
+a) The Pen you are holding your hand.
+b) The Chair on which you are sitting.
+c) Projector is also a real world entity.
+d) I am himself is an object.
+e) Mobile Phone is the real-world entity.
+--------------------------------------------------
+>> Every object has following two properties-
+1) Attributes. -> It is used to construct object.
+2) Behaviours.
+-------------------------------------------------------------------------------
+2. Class.
+>> It is blueprint or template from which objects are created.
+>> Properties of the objects are defined inside class.
+Following three things should be defined inside class:-
+1) Instance variables. => These will be attributes of the objects.
+2) Constructors. => Inside it we initialize instance variable value.
+3) Methods (Mostly getters and setters).=> These will be behaviours of the object.
+-------------------------------------------------------------------------------
+Note: Remember our program will create object to hold state/value of real world entity in memory. It means object created by program will be container of data in memory like variable.
+----------------------------------------------------------------------------
+Difference between variable and object:-
+------------------------------------------------------------------
+>> A single variable hold only one value in memory while a single object can hold multiple value in memory.
+>> objects can be shared among programs but a variable can't be shared.
+-------------------------------------------------------------------------------
+class Product
+{
+// code to create instance variables.
+private pid:number;  // Data Hiding/Information Hiding.
+private name:string;
+private brand:string;
+private price:number;
+constructor(p1:number,p2:string,p3:string.p4:number)
+{
+this.pid=p1;
+this.name=p2;
+this.brand=p3;
+this.price=p4;
+}
+show():void  // In typeScript,By Default method is Public.
+{
+console.log("Product ID:"+this.pid);
+console.log("Product Name:"+this.name);
+console.log("Product Brand:"+this.brand);
+console.log("Product Price:"+this.price);
+}
+}
+let product=new Product(101,"Mouse","Logitech",1300);
+product.showProduct();
+or 
+let product:Product=new Product(101,"Mouse","Logitech",1300);
+-----------------------------------------------------------------------
+TitleCase => MyNameIsKailashJoshi -> Class Name should be in TitleCase.
+camelCase => myNameIsKailashJoshi -> Method Name and variable name should be in camelCase.
+LowerCase => mynameiskailashjoshi -> Filename should be in lowercase.
+-----------------------------------------------------------------------
+Note: Inside class this keyword is used to access Instance variable and outside class Object reference is used to access Instance Variable.
+-------------------------------------------------
+Object Features as Container:- 
+--------------------------------------------------
+1) Holding Data :  Instance variables and constructors.
+2) Returning Data : Getter.
+3) Changing Data : Setter.
+--------------------------------------------------------------------------------------
+Instance variables:- 
+-----------------------------------------
+>> Those variables that are declared/defined inside class without using static keyword are known as Instance variables.
+class AA
+{
+x:number; Instance variable.   // These variables are by default is Public.
+static y:number; // Class variable or static variable.
+}
+>> Instance variables are created each time object from the class is created.
+>> It means instance variable can have multiple copies in memory.
+>> Following two activities are perfomed in construction of an object includes:- 
+a) Creating instance variables.
+b) Assigning values to these variables. -> Constructor is called to assign values.
+---------------------------------------------------------------------------------------
+class AA
+{
+private _x:number; // code to create instance variable. //private is recommendation to create instance variable but not Mandatory.
+constructor(x:number)  // constructor
+{
+this._x=x; // code to assign value to the instance variable.
+}
+get x()  // GETTER (READ)
+{
+return this._x;
+}
+set x(n:number)  // SETTER (CHANGE)
+{
+this._x=n;
+}
+}
+Note: Don't make your instance variable public otherwise there is no use of getter and setter,anyone can get and set the value. [if you create object of class then anyone can read and write.]
+>> If you want your instance variable value only read then remove setter otherwise getter but make sure instance variable must be private.
+class AA
+{
+x:number; // by Default it is public.
+constructor(x:number)
+{
+this.x=x;
+}
+}
+let obj=new AA(10);
+console.log(obj.x); //10 GET
+obj.x=100; // Set
+console.log(obj.x); //100 GET
+------------------------------------------
+class AA
+{
+private _x:number; // by Default it is public.
+constructor(x:number)
+{
+this._x=x;
+}
+get x()
+{
+    return this._x;
+}
+set x(n:number)
+{
+    this._x=n;
+}
+}
+let obj=new AA(10);
+console.log(obj.x); //10 GET
+obj.x=100; // Set
+console.log(obj.x); //100 GET
+----------------------------------------------------------------------------
+Reference of an Object:-
+------------------------------------
+>> Every object is uniquely identified  by using an id. This id is known as reference of the object.
+>> Command to create object also returns reference of the object.
+>> Program must keep this reference into a variable called reference variable.
+>> Data type of reference variable should be that class from which object is created.
+let prd:Product; // Code to create reference variable.
+prd=new Product(101,"Mouse","Logitech",1300) // code to create object of Product class and assigns reference of the object to the reference variable prd.
+>> Remember reference of the object will be used inside constructor and methods of the class to identify instance variables.
+>> Variable "this" holds reference of the object internally.
+-------------------------------------------------------------------------
+let product1=new Product(101,"Mouse","Logitech",1300) -> r1 -> pid,pid,pid
+let product2=new Product(102,"Mouse","Logitech",1300)
+let product3=new Product(103,"Mouse","Logitech",1300)
+---------------------------------------------------------------------
+class Product
+{
+  constructor(private pid:number,private name:string,private brand:string,private price:number) 
+    {
+    }
+}
+------------------------------------
