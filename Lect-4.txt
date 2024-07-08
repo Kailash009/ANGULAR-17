@@ -1,0 +1,74 @@
+Lect-4:-
+---------------------
+>> Namespace is a container of class.
+1. let obj=new App();
+2. obj.disp();
+Note: Object doesn't have any name because object is a run time entity.
+These above two line perform three operations:-
+>> First create obj name variable.
+>> Then create App class Object.
+>> Then we give that object reference to the disp().
+new App().disp(); // directly pass reference to the disp().
+--------------------------------------------------------------------
+Error:- Accessors are only available when targeting ECMAScript 5 and higher.
+1.  tsc --init  -> you will get tsconfig.json
+2.  Install typescript above version 5.
+Pillars of Oop's:-
+------------------------------
+1. Encapsulation. -> Data / Information Hiding.
+2. Data Abstraction. -> Hiding Complexity.
+3. Inheritance. -> Code Reusablity.
+4. Polymorphism. -> Reducing Complexity.
+---------------------------------------------------------------------------------------
+Inheritance:-
+==========
+>> Acquiring properties(specially methods) from an existing class into new class(The class that is being defined) is called Inheritance.
+>> The class from which properties are inherited is called super/parent /base class.
+>> The class which has inherited properties is called sub/child/derived class.
+class AA
+{
+}
+class BB extends AA
+{
+}
+Note: Remember only public and protected properties will be inherited by child.
+>> In typescript properties are by default is public.
+--------------------------------------------------------------------------
+. -> Current.
+.. -> Parent.
+/ -> Root.
+let person=new Second(101,"Kailash Joshi","Noida",748484811,"joshi@gmail.com");// When this code will run then 5 instance variable will be created and assign value to those variables.
+---------------------------------
+Method Overriding:-
+--------------------------------------
+>> To redefine parent class methods into child class is called Method Overriding.
+>> This should be done when child class wants to change implementation of parent class method.
+----------------------------------------------------------------------
+Rule: Child class constructor must call the constructor of parent class. Following code should be written inside child class constructor to call the constructor of parent class.
+super(); // This will be inserted by compiler.This will call default constructor of parent class. If parent class doesn't have default constructor then this code will give an error.
+or
+super(parameter); // This will be written by you.This will call parameterized constructor of parent class.
+------------------------------------------------------------------
+let person={  // Here person is a reference variable.
+    "pid":101,
+    "pname":"Kailash Joshi",
+    "city":"Noida"
+}
+console.log(person.pid);
+console.log(person.pname);
+console.log(person.city); // Anoymous object has been created.
+// Anonymous object is an object which created without class. 
+>> Creating object without defining class known as Anonymous object.
+---------------------------------------------------------------------------
+let list=[
+    {"pid":101,"name":"Rajesh","city":"Noida"},
+    {"PID":102,"name":"Simran","city":"Delhi"},
+    {"pid":103,"name":"Tinku","city":"Kanpur"},
+    {"pid":104,"name":"Abhi","city":"Rajasthan"},
+    {"pid":105,"name":"Kajal","city":"Rajasthan"},
+]
+for(let i=0;i<list.length;i++)
+{
+console.log(list[i]);
+}
+--------------------------------------------------------------------------
