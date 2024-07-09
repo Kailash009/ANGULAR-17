@@ -1,0 +1,106 @@
+Lect-5:-
+-----------------------------------------
+>> To redefine parent class method into child class known as Method Overriding.
+>> When child class want to change the body or implementation then we use Method Overriding.
+--------------------------------------------------
+>> Object is container of data.
+>> Data will be kept into object.
+-----------------------------------------
+Function Overloading:-
+-----------------------------------------
+>> Defining more than one same name methods inside a class is known as Method Overloading.
+>> Remember parameter/argument list must be different in methods.
+>> Method overloading should be done when we want to define more than one methods to perform same task on different parameters.
+>> Type script support 'Function Overlaoding'.
+Note: TypeScript doesn't support Method Overloading.
+>> Function Overloading is a mechanism or ability to create multiple methods with the same name but different parameter types and return type.
+------------------------------------------------------------------------
+Function Overloading:- (How to change parameter)
+------------------------------------------------------------
+1) Change number of parameter.
+add(num1:number,num2:number)
+add(num1:number,num2:number,num3:number)
+2) Change data type of parameter.
+add(num1:number,num2:number)
+add(num1:string,num2:string)
+3) Change sequence of parameter.
+add(num1:number,num2:string)
+add(num2:string,num1:number)
+---------------------------------------------------------------------------------------
+// Function Overloading
+function add(num1:number,num2:number);  // Declaring Function
+function add(num1:string,num2:string);
+
+function add(num1:any,num2:any)
+{
+    console.log(num1+num2);
+}
+add(100,200);
+add("Kailash","Joshi");
+-----------------------------------------------------------------------
+Interface:-
+--------------------------
+Multiple Inheritance:-
+-------------------------------
+>> Inheriting properties from more than one class.
+>> Multiple inheritance is not required in real world as well as in programming.
+---------------------------------------------------------------
+class Animal
+{
+properties
+}
+class Bird
+{
+properties
+}
+class AA : Animal,Bird
+{
+}
+--------------------------------------------------------------------
+** Interface is the blueprint of class.
+** Interface is a medium between program and programming technology.
+** Interface provide uniformity.
+>> Class is a Blueprint of object.
+>> Interface is bluePrint of Class.
+------------------------------------------------------------------
+interface Camera
+{
+}
+interface Radio
+{
+}
+interface Storage
+{
+}
+interface Phone
+{
+}
+interface SmartPhone:Camera,Radio,Storage,Phone
+{
+} 
+class IPhone implements SmartPhone
+{
+}
+--------------------------------------------------------------------------------
+this -> 'this' hold the reference of current object.
+--------------------------------------------------------------------------------
+Keywords:-
+------------------------
+>> It is a vocabulary of programming language.
+class Person
+{
+     name:string;
+     constructor(abc:string)
+     {
+	this.name=abc;
+     }
+     show()
+      {
+       console.log(this.name);
+      }
+}
+let p1=new Person("Rahul");  
+let p2=new Person("Vijay");
+let p3=new Person("Amit");
+p2.show()
+------------------------------------------------------------------------------
