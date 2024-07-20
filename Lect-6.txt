@@ -1,0 +1,105 @@
+Lect-6:-
+-------------------
+Array:-
+-------------------
+When program creates array?
+As we know our program creates variables to store data.
+Let us suppose program want to store 5 numeric value in memory.
+It can be achieved by following two ways-
+1) Declare 5 numeric type variable.
+	a) Scattered Memory allocation.
+	b) Stack Memory.
+	c) Increase Complexity.
+2) Declare number type array.
+	a) Sequential/Contiguous Memory allocation.
+	b) Heap Memory.
+	c) Reduce Complexity.
+	d) Accessing Data in a Fast manner.
+--------------------------------------------------------------------------
+Program must create array when program want to keep similar type of data of fixed size.
+Like object,array always created in Heap Memory.
+Like object,array is also identified by an unique reference.
+Program can also keep reference of objects into array.
+--------------------------------------------------------------------------
+Syntax:-
+---------------------
+let arr:number[]=[10,20,30,40,50];
+let arr:number[]=[10,30,45,78,23];
+for(let i=0;i<arr.length;i++)
+{
+console.log(arr[i]);
+}
+--------------------------------------------------------------------------
+// let arr:number[]=[10,20,30,40,50];
+// let sum:number=arr[0];
+// for(let i=1;i<arr.length;i++)
+// {
+//     sum+=arr[i];
+// }
+// console.log("Sum="+sum);
+let num=[34,23,,67,3,6,1];
+num.sort((n1,n2)=>n2-n1).forEach(n=>console.log(n)); // Arrow Function or Callback Function
+-------------------------------------------------------------------------------------------
+// let arr:number[]=[10,20,30,40,50];
+// let sum:number=arr[0];
+// for(let i=1;i<arr.length;i++)
+// {
+//     sum+=arr[i];
+// }
+// console.log("Sum="+sum);
+// let num=[34,23,,67,3,6,1];
+// num.sort((n1,n2)=>n2-n1);
+// console.log(num);
+// let num=[34,23,,67,3,6,1];
+// num.sort(doSort); // CallBack Function.-> Call Function inside Function.
+// function doSort(n1:number,n2:number)
+// {
+// return n2-n1;
+// }
+// console.log(num);
+
+// let num=[34,67,2,1,45,67,87];
+// num.forEach(n=>console.log(n));
+
+// let num=[34,67,2,1,45,67,87];
+// num.forEach(f1); // CallBack Function.[Anonymous Function]
+// function f1(n:number)
+// {
+//     console.log(n);
+// }
+
+let list=[
+    {"eid":101,"name":"Rahul","department":"sales","Salary":450000},
+    {"eid":102,"name":"Kunal","department":"IT","Salary":25000},
+    {"eid":103,"name":"hemant","department":"MRTK","Salary":35000},
+    {"eid":104,"name":"Savita","department":"sales","Salary":550000},
+    {"eid":105,"name":"Abhi","department":"HR","Salary":15000},
+    {"eid":106,"name":"Jayant","department":"sales","Salary":750000},
+]
+// for(let i=0;i<list.length;i++)
+// {
+// console.log(list[i]);
+// }
+// list.forEach(n=>console.log(n)); // Using ForEach..
+// waq to get employee whose belong to sales department.
+// for(let i=0;i<list.length;i++)
+// {
+//     if(list[i].department=="sales")
+//     {
+//         console.log(list[i]);
+//     }
+// }
+//Using Arrow Function. whose belong to sales department.
+// list.filter(emp=>emp.department=="sales").forEach(emp=>console.log(emp));
+// Change Department of 102 Employee 
+// list.filter(emp=>emp.eid==102).forEach(emp=>emp.department="Manager");
+// console.log(list[1]);
+// Get all Employee Record Salary in Ascending Order.
+//list.sort((e1,e2)=>e1.Salary-e2.Salary).forEach(emp=>console.log(emp)); 
+// Get all Employee Record Name in Ascending Order.
+//list.sort((e1,e2)=>e1.name.localeCompare(e2.name)).forEach(emp=>console.log(emp));
+//Get only name of Employee in Upper Case.
+//list.map(emp=>emp.name.toLocaleUpperCase()).forEach(name=>console.log(name));
+// waq to get all the employee whose  department is sales and display in Upper Case
+//list.filter(emp=>emp.department=="sales").map(emp=>emp.department.toUpperCase()).forEach(sale=>console.log(sale)); // Method Chaining.
+-----------------------------------------------------------------------------------------
